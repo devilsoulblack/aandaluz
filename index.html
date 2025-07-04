@@ -3,237 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfredo Andaluz Prado | Landing Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <title>Alfredo Andaluz Prado</title>
   <style>
-    :root {
-      --primary: #2563eb; /* azul */
-      --dark: #0f172a;   /* gris muy oscuro */
-      --light: #f8fafc;  /* casi blanco */
-      --accent: #22c55e; /* verde */
-    }
-
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    /* ------ Layout helpers ------ */
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin-inline: auto;
-    }
-
-    section {
-      padding: 4rem 0;
-    }
-
-    /* ------ Hero ------ */
-    .hero {
-      display: grid;
-      min-height: 100vh;
-      place-content: center;
-      text-align: center;
-      background: radial-gradient(circle at top left, var(--primary), var(--dark));
-      color: white;
-    }
-
-    .hero img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1.5rem;
-      border: 4px solid var(--accent);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.6rem;
-      background: var(--accent);
-      color: var(--dark);
-      border-radius: 9999px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-
-    .cta:hover {
-      transform: translateY(-3px);
-    }
-
-    /* ------ About ------ */
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .about p {
-      max-width: 60ch;
-      margin-inline: auto;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ------ Skills ------ */
-    .skills-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1.2rem;
-      margin-top: 2rem;
-    }
-
-    .skill {
-      background: white;
-      padding: 1rem;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      font-weight: 600;
-    }
-
-    /* ------ Projects ------ */
-    .projects-grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      margin-top: 2rem;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111111;
       display: flex;
       flex-direction: column;
-    }
-
-    .project-card img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-    }
-
-    .project-card .content {
-      padding: 1rem 1.25rem 1.5rem;
-      flex: 1;
-    }
-
-    .project-card h3 {
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-      font-size: 1.15rem;
-    }
-
-    .project-card p {
-      font-size: 0.95rem;
-      color: #475569;
-    }
-
-    /* ------ Contact ------ */
-    .contact {
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
     }
 
-    .contact a {
-      color: var(--primary);
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #000000;
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .summary {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #333;
     }
 
     footer {
-      text-align: center;
-      padding: 2rem 0;
-      background: var(--dark);
-      color: white;
-      font-size: 0.9rem;
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <!-- Hero ----------------------------------------------->
-  <header class="hero" id="inicio">
-    <img src="https://media.licdn.com/dms/image/v2/C4E03AQFQGU0oXvinLQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1660251083741?e=1756944000&v=beta&t=w9VlglaJkOBv516D9Z7qilUogKhdOdUxMRuVvU06Omo" alt="Foto de Alfredo Andaluz Prado" />
+  <div class="container">
+    <img src="https://scontent.fscl35-1.fna.fbcdn.net/v/t39.30808-6/385905690_10160725008191405_6010944377268452548_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEWIKBrxhV4NNyucBaiveFmIEDkR8vFx0wgQORHy8XHTCQXHg6EAClA_gKmXlZEKw0&_nc_ohc=qfobavFqrXAQ7kNvwFBm873&_nc_oc=AdmhdftrXDjGhOsOSoZax4bWYciDIh9nRp_v5-5-47lIrKqGbNH5ITrKK5BNLqnr0mY&_nc_zt=23&_nc_ht=scontent.fscl35-1.fna&_nc_gid=x2Q1mq3bohcaY2-IlOq-gQ&oh=00_AfN6Ti_ClnRrCfYxHdz910gWsGt8XUK6KOmrwsI0n1z3Xg&oe=686DC6FF" alt="Foto de Alfredo" />
     <h1>Alfredo Andaluz Prado</h1>
-    <p>Especialista en Networking e Infraestructura TI · Líder en innovación y automatización</p>
-    <a class="cta" href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">Conecta en LinkedIn</a>
-  </header>
+    <p>Especialista en Networking e Infraestructura TI</p>
+    <a class="button" href="https://www.linkedin.com/in/aandaluz/" target="_blank">Visita mi LinkedIn</a>
 
-  <!-- About ----------------------------------------------->
-  <section class="about container" id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>
-      Ingeniero con <strong>15+ años</strong> de experiencia construyendo y gestionando infraestructuras de red de alto rendimiento. Apasionado por la automatización, las mejores prácticas DevOps y los proyectos que desafían el status quo.
-    </p>
-    <p>
-      Actualmente lidero el equipo de <em>Networking &amp; Infraestructura TI</em> en una compañía de servicios financieros, garantizando conectividad segura para más de <strong>1.300 empleados</strong>.
-    </p>
-  </section>
-
-  <!-- Skills ---------------------------------------------->
-  <section class="container" id="habilidades">
-    <h2>Habilidades principales</h2>
-    <div class="skills-list">
-      <div class="skill">Redes Cisco / Palo Alto</div>
-      <div class="skill">Firewall NGFW</div>
-      <div class="skill">Automatización Ansible</div>
-      <div class="skill">AWS &amp; Azure</div>
-      <div class="skill">Linux / Docker</div>
-      <div class="skill">Gestión de proyectos</div>
+    <div class="summary">
+      <p>Profesional con más de 15 años de experiencia en tecnologías de la información, liderando proyectos críticos en redes, ciberseguridad y automatización. Enfocado en la mejora continua, eficiencia operativa y diseño de infraestructuras escalables. Apasionado por el aprendizaje constante y la colaboración interdisciplinaria.</p>
     </div>
-  </section>
 
-  <!-- Projects -------------------------------------------->
-  <section class="container" id="proyectos">
-    <h2>Proyectos destacados</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/640x360" alt="Proyecto 1" />
-        <div class="content">
-          <h3>Migración WAN Global</h3>
-          <p>Rediseño completo de la red global multicontinente, reduciendo la latencia en un 35&nbsp;% y los costos en un 20&nbsp;%.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/640x360" alt="Proyecto 2" />
-        <div class="content">
-          <h3>Implementación de SD‑WAN</h3>
-          <p>Despliegue de SD‑WAN para 50+ sucursales, mejorando la resiliencia y la visibilidad de la red.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/640x360" alt="Proyecto 3" />
-        <div class="content">
-          <h3>Automatización con Ansible</h3>
-          <p>Automatización de tareas de configuración, logrando una reducción del 75&nbsp;% en tiempo de implementación.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact --------------------------------------------->
-  <section class="contact container" id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Interesado en colaborar? Mándame un correo a <a href="mailto:alfredo@example.com">alfredo@example.com</a> o conéctate en LinkedIn.</p>
-  </section>
-
-  <!-- Footer ---------------------------------------------->
-  <footer>
-    © 2025 Alfredo Andaluz Prado · Hecho con <span aria-label="amor" role="img">❤️</span> en Santiago de Chile.
-  </footer>
+    <footer>
+      <p>© 2025 Alfredo Andaluz Prado</p>
+    </footer>
+  </div>
 </body>
 </html>
