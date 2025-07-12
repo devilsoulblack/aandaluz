@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfredo Andaluz Prado</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .container {
-      padding: 2rem;
-      max-width: 600px;
-      width: 100%;
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #444;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #000000;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.95rem;
-    }
-
-    .summary {
-      margin-top: 2rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.75rem;
-      color: #888;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page Personal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <img src="https://scontent.fscl35-1.fna.fbcdn.net/v/t39.30808-6/385905690_10160725008191405_6010944377268452548_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEWIKBrxhV4NNyucBaiveFmIEDkR8vFx0wgQORHy8XHTCQXHg6EAClA_gKmXlZEKw0&_nc_ohc=qfobavFqrXAQ7kNvwFBm873&_nc_oc=AdmhdftrXDjGhOsOSoZax4bWYciDIh9nRp_v5-5-47lIrKqGbNH5ITrKK5BNLqnr0mY&_nc_zt=23&_nc_ht=scontent.fscl35-1.fna&_nc_gid=x2Q1mq3bohcaY2-IlOq-gQ&oh=00_AfN6Ti_ClnRrCfYxHdz910gWsGt8XUK6KOmrwsI0n1z3Xg&oe=686DC6FF" alt="Foto de Alfredo" />
-    <h1>Alfredo Andaluz Prado</h1>
-    <p>Especialista en Networking e Infraestructura TI</p>
-    <a class="button" href="https://www.linkedin.com/in/aandaluz/" target="_blank">Visita mi LinkedIn</a>
+<body class="bg-gray-50 text-gray-800">
 
-    <div class="summary">
-      <p>Profesional con más de 15 años de experiencia en tecnologías de la información, liderando proyectos críticos en redes, ciberseguridad y automatización. Enfocado en la mejora continua, eficiencia operativa y diseño de infraestructuras escalables. Apasionado por el aprendizaje constante y la colaboración interdisciplinaria.</p>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-indigo-600 to-blue-400 text-white py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hola, soy <span class="text-yellow-300">[Tu Nombre]</span></h1>
+        <p class="text-xl mb-6">Desarrollador web apasionado por crear experiencias digitales increíbles y soluciones innovadoras.</p>
+        <a href="#contacto" class="bg-yellow-300 text-indigo-700 px-6 py-3 rounded shadow font-semibold hover:bg-yellow-200 transition">Contáctame</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de perfil" class="rounded-full border-4 border-white shadow-lg w-48 h-48 object-cover">
+      </div>
     </div>
+  </section>
 
-    <footer>
-      <p>© 2025 Alfredo Andaluz Prado</p>
-    </footer>
-  </div>
+  <!-- Sobre mí -->
+  <section id="sobremi" class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4 text-indigo-600">Sobre mí</h2>
+      <p class="mb-6">Soy un desarrollador web con experiencia en tecnologías modernas como JavaScript, React, Node.js y Tailwind CSS. Me encanta aprender nuevas herramientas y colaborar en proyectos que generen impacto.</p>
+      <div class="flex justify-center space-x-4">
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded">JavaScript</span>
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded">React</span>
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded">Node.js</span>
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded">Tailwind CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="bg-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-indigo-600 mb-12">Proyectos destacados</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Proyecto 1</h3>
+          <p class="mb-4 text-sm">Descripción breve del proyecto realizado, tecnologías usadas y logros principales.</p>
+          <a href="#" class="text-indigo-600 font-bold hover:underline">Ver más</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Proyecto 2</h3>
+          <p class="mb-4 text-sm">Descripción breve del proyecto realizado, tecnologías usadas y logros principales.</p>
+          <a href="#" class="text-indigo-600 font-bold hover:underline">Ver más</a>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Proyecto 3</h3>
+          <p class="mb-4 text-sm">Descripción breve del proyecto realizado, tecnologías usadas y logros principales.</p>
+          <a href="#" class="text-indigo-600 font-bold hover:underline">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-indigo-600 py-16 text-white">
+    <div class="container mx-auto px-4 max-w-lg">
+      <h2 class="text-3xl font-bold text-center mb-6">Contacto</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full px-4 py-2 rounded text-gray-800" required>
+        <input type="email" placeholder="Correo electrónico" class="w-full px-4 py-2 rounded text-gray-800" required>
+        <textarea placeholder="Mensaje" class="w-full px-4 py-2 rounded text-gray-800" rows="4" required></textarea>
+        <button type="submit" class="w-full bg-yellow-300 text-indigo-700 font-bold px-4 py-2 rounded hover:bg-yellow-200 transition">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-sm bg-gray-100 mt-8">
+    © 2025 [Tu Nombre]. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
