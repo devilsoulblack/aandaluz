@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="la">
 <head>
-<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF78W6SH8K"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,92 +10,175 @@
 
   gtag('config', 'G-VF78W6SH8K');
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfredo Andaluz Prado</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #111111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alfredo Andaluz Prado</title>
+<meta name="description" content="Oblivium sempiternum daemonis">
+<meta name="theme-color" content="#08080A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Cinzel:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#08080A;
+    --ivory:#ECE4D3;
+    --gold:#B89B5E;
+    --gold-dim:rgba(184,155,94,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 50%, #15131A 0%, var(--bg) 70%);
+    color:var(--ivory);
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
 
-    .container {
-      padding: 2rem;
-      max-width: 600px;
-      width: 100%;
-    }
+  /* grano de película */
+  body::after{
+    content:"";
+    position:fixed; inset:-50%;
+    pointer-events:none;
+    opacity:.07;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation:grano 1.2s steps(6) infinite;
+  }
+  @keyframes grano{
+    0%{transform:translate(0,0)} 20%{transform:translate(-3%,2%)} 40%{transform:translate(2%,-3%)}
+    60%{transform:translate(-2%,-1%)} 80%{transform:translate(3%,3%)} 100%{transform:translate(0,0)}
+  }
 
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
+  main{
+    position:relative;
+    display:flex; flex-direction:column; align-items:center;
+    gap:clamp(22px,3.5vw,40px);
+    padding:24px;
+    text-align:center;
+  }
 
-    h1 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
+  /* ornamentos: línea — rombo — línea */
+  .orn{
+    display:flex; align-items:center; gap:14px;
+    width:min(520px,70vw);
+    opacity:0;
+    animation:aparecer 2.4s ease forwards;
+  }
+  .orn::before,.orn::after{
+    content:""; flex:1; height:1px;
+    background:linear-gradient(90deg, transparent, var(--gold-dim) 40%, var(--gold));
+  }
+  .orn::after{transform:scaleX(-1)}
+  .orn svg{flex:none}
+  .orn.arriba{animation-delay:.2s}
+  .orn.abajo{animation-delay:3.4s}
 
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #444;
-    }
+  h1{
+    margin:0;
+    font-family:"Cormorant Garamond", Garamond, "Times New Roman", serif;
+    font-style:italic;
+    font-weight:300;
+    font-size:clamp(34px,6.4vw,92px);
+    line-height:1.08;
+    letter-spacing:.02em;
+    animation:respirar 7s ease-in-out 4.5s infinite;
+  }
+  h1 .p{display:inline-block; white-space:nowrap}
+  h1 .l{
+    display:inline-block;
+    opacity:0;
+    filter:blur(10px);
+    transform:translateY(.15em);
+    animation:letra 1.6s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  h1 .sp{display:inline-block; width:.28em}
 
-    a.button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #000000;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.95rem;
-    }
+  .cita{
+    margin:clamp(6px,1.5vw,16px) 0 0;
+    max-width:min(760px,88vw);
+    font-family:"Cormorant Garamond", Garamond, "Times New Roman", serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(17px,2vw,25px);
+    line-height:1.55;
+    letter-spacing:.015em;
+    color:rgba(236,228,211,.72);
+    opacity:0;
+    transform:translateY(8px);
+    animation:subir 2.2s cubic-bezier(.2,.7,.2,1) 3.7s forwards;
+  }
+  .cita p{margin:0;text-wrap:balance}
+  .cita p + p{
+    margin-top:.35em;
+    color:var(--gold);
+    letter-spacing:.04em;
+  }
+  @keyframes subir{ to{opacity:1; transform:none} }
 
-    .summary {
-      margin-top: 2rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
+  .lema{
+    margin:0;
+    font-family:"Cinzel", serif;
+    font-size:clamp(10px,1.1vw,13px);
+    letter-spacing:.6em;
+    padding-left:.6em; /* compensa el tracking final */
+    color:var(--gold);
+    opacity:0;
+    animation:aparecer 2s ease 5s forwards;
+  }
 
-    footer {
-      margin-top: 2rem;
-      font-size: 0.75rem;
-      color: #888;
-    }
-  </style>
+  @keyframes letra{ to{opacity:1; filter:blur(0); transform:none} }
+  @keyframes aparecer{ to{opacity:1} }
+  @keyframes respirar{
+    0%,100%{text-shadow:0 0 0 rgba(236,228,211,0)}
+    50%{text-shadow:0 0 28px rgba(236,228,211,.18), 0 0 2px rgba(184,155,94,.35)}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body::after{animation:none}
+    h1, .orn, .lema, .cita, h1 .l{animation:none !important; opacity:1 !important; filter:none !important; transform:none !important}
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://raw.githubusercontent.com/devilsoulblack/aandaluz/refs/heads/main/385905690_10160725008191405_6010944377268452548_n.jpg" alt="Foto de Alfredo Andaluz Prado" />
-    <h1>Alfredo Andaluz Prado</h1>
-    <p>Especialista en Networking e Infraestructura TI</p>
-    <a class="button" href="https://www.linkedin.com/in/aandaluz/" target="_blank">Visita mi LinkedIn</a>
-
-    <div class="summary">
-      <p>Lidero la estrategia y operación de Infraestructura y Redes, asegurando la disponibilidad, continuidad, seguridad y evolución de los servicios tecnológicos que soportan el negocio.<br><br> 
-
-Gestiono equipos técnicos, proveedores y proyectos estratégicos de infraestructura, trabajando de manera transversal con Ciberseguridad, Arquitectura, Desarrollo y las áreas de negocio.<br><br>
-
-Mi foco está en mantener una operación tecnológica confiable y resiliente, impulsar la modernización de plataformas, optimizar recursos y fortalecer la continuidad operacional y la capacidad de respuesta ante incidentes críticos.</p><br>
-    </div>
-    <center><a href="https://open.spotify.com/user/12139911283">
-  <img src="https://spotify-recently-played.jeffreyca.workers.dev/svg?user=12139911283&amp;theme=spotify&amp;width=500&amp;unique=1&amp;duration=1&amp;album=1&amp;footer=wave" alt="Spotify recently played" width="500" />
-</a></center>
-
-    <footer>
-      <p>© 2025 Alfredo Andaluz Prado</p>
-    </footer>
+<main>
+  <div class="orn arriba" aria-hidden="true">
+    <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 0L10 5 5 10 0 5z" fill="#B89B5E"/></svg>
   </div>
+
+  <h1 id="frase" aria-label="Oblivium sempiternum daemonis">Oblivium sempiternum daemonis</h1>
+
+  <div class="orn abajo" aria-hidden="true">
+    <svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 0L10 5 5 10 0 5z" fill="none" stroke="#B89B5E"/></svg>
+  </div>
+
+  <blockquote class="cita" lang="en">
+    <p>“What is a man? A miserable little pile of secrets.</p>
+    <p>But enough talk, have at you!”</p>
+  </blockquote>
+
+  <p class="lema" aria-hidden="true">MMXXVI</p>
+</main>
+
+<script>
+  // Divide la frase en letras para revelarlas una a una (el texto real queda en aria-label).
+  (function () {
+    var h = document.getElementById('frase');
+    var palabras = h.textContent.trim().split(/\s+/);
+    var i = 0, html = '';
+    palabras.forEach(function (p, k) {
+      html += '<span class="p" aria-hidden="true">';
+      for (var c = 0; c < p.length; c++) {
+        html += '<span class="l" style="animation-delay:' + (0.6 + i * 0.07).toFixed(2) + 's">' + p[c] + '</span>';
+        i++;
+      }
+      html += '</span>';
+      if (k < palabras.length - 1) html += '<span class="sp" aria-hidden="true"> </span>';
+    });
+    h.innerHTML = html;
+  })();
+</script>
 </body>
 </html>
